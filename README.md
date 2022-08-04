@@ -1,2 +1,3 @@
 # Interactive-WhiteBoard-clients-servers-on-RasberryPi
-This is the First year project of Advanced Programming from university of Southampton. The project includes creating interactive whiteboard and implementing this into 2 RasberryPi. These two Pi can then be paired through wires and the users can draw on each others interface. 
+This is the First year project of Advanced Programming from university of Southampton 2022. The project includes creating interactive whiteboard and implementing this into 2 RasberryPi. These two Pi can then be paired through wires and the users can draw on each others interface. 
+Since this is an University project, if you are a student of University of Southampton and doing the similar project, U might consider not to copy the whole project. Otherwise, please feel free to take this as a reference of C++, Qt or communication project. Thank you for reading and feel free to contact me 
