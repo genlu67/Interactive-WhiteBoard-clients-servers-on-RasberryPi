@@ -1,3 +1,5 @@
+// A class implement based on Qt to handle UI: mouse interaction and basic interface
+
 #ifndef DRAW_H
 #define DRAW_H
 
@@ -39,22 +41,21 @@ protected:
     void resizeEvent(QResizeEvent *event) override;
 
 private:
+    // private function to draw on the whiteboard
     void drawLineTo(const QPoint &endPoint);
     void resizeImage(QImage *image, const QSize &newSize);
 
-
+    // private variables
     bool modified;
-
     bool scribbling;
     QColor myPenColor;
     int myPenWidth;
-
     QImage image;
-
     QPoint lastPoint;
 
 
 signals:
+    // Signalling to the Pins (in main)
     void sendPoint(QPoint p, char c);
     void sendClear();
     void sendColour(QColor colour);
