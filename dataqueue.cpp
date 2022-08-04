@@ -1,5 +1,7 @@
 #include "dataqueue.h"
 
+// All of this function is a wrap around simple functions of queue (STL in C++) with mutex, therefore the information can be corrected transport 
+
 DataQueue::DataQueue()
 {
     pthread_mutex_init(&mutex,nullptr);
@@ -10,6 +12,7 @@ DataQueue::~DataQueue()
     pthread_mutex_destroy(&mutex);
 }
 
+// return size of the dataqueue
 int DataQueue::size()
 {
     pthread_mutex_lock(&mutex);
@@ -18,6 +21,7 @@ int DataQueue::size()
     return s;
 }
 
+//return the front of the dataququeue
 std::vector<bool> DataQueue::front()
 {
     std::vector<bool> dvector;
@@ -27,6 +31,7 @@ std::vector<bool> DataQueue::front()
     return dvector;
 }
 
+// delete the front elements of the data queue
 void DataQueue::pop_back()
 {
     pthread_mutex_lock(&mutex);
@@ -34,6 +39,7 @@ void DataQueue::pop_back()
     pthread_mutex_unlock(&mutex);
 }
 
+// add new data to the queue
 void DataQueue::push_back(std::vector<bool> data)
 {
     pthread_mutex_lock(&mutex);
