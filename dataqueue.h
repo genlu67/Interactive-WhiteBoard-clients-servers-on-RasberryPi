@@ -1,6 +1,9 @@
 #ifndef DATAQUEUE_H
 #define DATAQUEUE_H
 
+// A class that acts as data queue for signal to correctly transport from one Rasberry Pi to others
+// This class used mutex to avoid Race Condition 
+
 #include <vector>
 #include <queue>
 #include <pthread.h>
